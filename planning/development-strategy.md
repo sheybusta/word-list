@@ -1,6 +1,7 @@
 ## Development strategy
 
-Given a description what it does.
+### Given a description what it does.
+
 `type: css`
 `type: html`
 `type: logic`
@@ -10,7 +11,8 @@ Given a description what it does.
 `type: init`
 `type: data`
 
-Given sorting options.
+### Given sorting options.
+
 `type: css`
 `type: html`
 `type: logic`
@@ -20,18 +22,8 @@ Given sorting options.
 `type: init`
 `type: data`
 
-Given 'add' and 'remove' buttons.
+### Given 'add' and 'remove' buttons.
 
-    `type: css`
-    `type: html`
-    `type: logic`
-    `type: handlers`
-    `type: procedures`
-    `type: listeners`
-    `type: init`
-    `type: data`
-
-Given field to type in a word.
 `type: css`
 `type: html`
 `type: logic`
@@ -40,16 +32,28 @@ Given field to type in a word.
 `type: listeners`
 `type: init`
 `type: data`
-Given the item displayed on the screen.
 
-    `type: css`
-    `type: html`
-    `type: logic`
-    `type: handlers`
-    `type: procedures`
-    `type: listeners`
-    `type: init`
-    `type: data`
+### Given field to type in a word.
+
+`type: css`
+`type: html`
+`type: logic`
+`type: handlers`
+`type: procedures`
+`type: listeners`
+`type: init`
+`type: data`
+
+### Given the item displayed on the screen.
+
+`type: css`
+`type: html`
+`type: logic`
+`type: handlers`
+`type: procedures`
+`type: listeners`
+`type: init`
+`type: data`
 
 <!--
 
