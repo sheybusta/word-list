@@ -4,28 +4,27 @@
 
 ### old -> new
 
-word are in array - strings
-return array
+words are in array - return array
 
 ### new -> old
 
-clone
-return reversed clone
+clone[...item] - return reversed clone
 
 ### a -> z
 
-sort(); from first letter, second ... starting from A
+ascendant - sort(); makes this order
+sort(); from first letter, second ... - starting from A
 [DevMozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 ### z -> a
 
-sort(); from first letter, second ... starting from Z
+reverse the sort(); - starting from Z
 [DevMozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 ### short -> long
 
-count length
+count length - shortest to longest
 
 ### long -> short
 
-count length
+count length - longest to shortest
