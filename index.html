@@ -9,10 +9,10 @@
 
   <body>
     <div id="root">
-      <form id="input-form">
+      <form id="input-form"> <!--here start the form-->
         <input name="text" placeholder="new word" />
-        <input type="button" value="add" />
-        <input type="button" value="remove" />
+        <input type="button" value="add" />  <!--first button -->
+        <input type="button" value="remove" /> <!--second button -->
       </form>
       <code id="warnings" class="warning"></code>
       <br />
@@ -25,7 +25,7 @@
         <option value="shortest">short -> long</option>
         <option value="longest">long -> short</option>
       </select>
-      <div id="list-container"></div>
+      <div id="list-container"></div> <!---there go our words-->
     </div>
 
     <script type="module" src="./src/init/index.js"></script>

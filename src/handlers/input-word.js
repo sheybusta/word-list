@@ -1,9 +1,9 @@
-import { data } from '../data.js';
-import { isWord } from '../logic/is-word.js';
-import { sortStrings } from '../logic/sort-strings.js';
-import { updateList } from '../procedures/update-list.js';
+import { data } from "../data.js";
+import { isWord } from "../logic/is-word.js";
+import { sortStrings } from "../logic/sort-strings.js";
+import { updateList } from "../procedures/update-list.js";
 
-const warnings = document.getElementById('warnings');
+const warnings = document.getElementById("warnings");
 
 /**
  * Entry point for users adding a word to the list.
@@ -14,16 +14,16 @@ const warnings = document.getElementById('warnings');
 export const handleInputWord = (event) => {
   /* -- entry point for adding or removing a word -- */
   // debugger;
-  console.log('-- handler: input word --');
+  console.log("-- handler: input word --");
 
   /* -- check the target -- */
-  if (event.target.type !== 'button') {
+  if (event.target.type !== "button") {
     return;
   }
 
   /* -- gather user input from DOM -- */
-  const text = event.target.form.text.value;
-  const action = event.target.value;
+  const text = event.target.form.text.value; // line 13 on HTML (something happen when user enter a new value)
+  const action = event.target.value; // this is the button
 
   /* -- use the input and data to implement the user story --
 
@@ -41,7 +41,31 @@ export const handleInputWord = (event) => {
         it is removed
         the list is re-rendered
   */
+  if (action === "add") {
+    if (!isWord(text)) {
+      const theWarning = document.getElementById("warnings");
+      theWarning.innerHTML = `"${text}" is not a word`;
+      theWarning.style.color = "red";
+      // console.log(`${text} is not a word!`);
+    } else {
+      // console.log("adding to the list");
+      data.words.push(text); // here you are adding from data and to special key that is word
+      console.log(data);
+    }
+  }
 
+  if (action === "remove") {
+    // two paths
+    if (!data.words.includes(text)) {
+      const theWarningS = document.getElementById("warnings");
+      theWarningS.innerHTML = `"${text}" is not in the list`;
+      theWarningS.style.color = "red"; // if it isn't in the list - warning "are you sure you want to remove it, it not in the list "
+      // console.log("warning");
+    } else {
+      data.words.splice(data.words.indexOf(text), 1); // if it exit in the list already we need to remove
+      // console.log("remove");
+    }
+  }
   // ... write some code ...
 
   /* -- render new words -- */
