@@ -24,7 +24,7 @@ export const handleInputWord = (event) => {
   /* -- gather user input from DOM -- */
   const text = event.target.form.text.value; // line 13 on HTML (something happen when user enter a new value)
   const action = event.target.value; // this is the button
-
+  const theWarning = document.getElementById("warnings");
   /* -- use the input and data to implement the user story --
 
     a user can add a new word to the list
@@ -41,11 +41,13 @@ export const handleInputWord = (event) => {
         it is removed
         the list is re-rendered
   */
+
   if (action === "add") {
+    theWarning.innerHTML = "";
     if (!isWord(text)) {
-      const theWarning = document.getElementById("warnings");
       theWarning.innerHTML = `"${text}" is not a word`;
       theWarning.style.color = "red";
+
       // console.log(`${text} is not a word!`);
     } else {
       // console.log("adding to the list");
@@ -55,11 +57,11 @@ export const handleInputWord = (event) => {
   }
 
   if (action === "remove") {
+    theWarning.innerHTML = "";
     // two paths
     if (!data.words.includes(text)) {
-      const theWarningS = document.getElementById("warnings");
-      theWarningS.innerHTML = `"${text}" is not in the list`;
-      theWarningS.style.color = "red"; // if it isn't in the list - warning "are you sure you want to remove it, it not in the list "
+      theWarning.innerHTML = `"${text}" is not in the list`;
+      theWarning.style.color = "red"; // if it isn't in the list - warning "are you sure you want to remove it, it not in the list "
       // console.log("warning");
     } else {
       data.words.splice(data.words.indexOf(text), 1); // if it exit in the list already we need to remove
