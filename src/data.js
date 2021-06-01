@@ -4,5 +4,5 @@
  */
 export const data = {
   words: [],
-  sort: 'oldest',
+  sort: "oldest",
 };
