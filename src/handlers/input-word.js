@@ -3,7 +3,7 @@ import { isWord } from "../logic/is-word.js";
 import { sortStrings } from "../logic/sort-strings.js";
 import { updateList } from "../procedures/update-list.js";
 
-const warnings = document.getElementById("warnings");
+// const warnings = document.getElementById("warnings");
 
 /**
  * Entry point for users adding a word to the list.
@@ -22,8 +22,8 @@ export const handleInputWord = (event) => {
   }
 
   /* -- gather user input from DOM -- */
-  const text = event.target.form.text.value; // line 13 on HTML (something happen when user enter a new value)
-  const action = event.target.value; // this is the button
+  const text = event.target.form.text.value; //  taking the value of text that is a input.
+  const action = event.target.value; // taking button add and remove
   const theWarning = document.getElementById("warnings");
   /* -- use the input and data to implement the user story --
 
@@ -43,10 +43,10 @@ export const handleInputWord = (event) => {
   */
 
   if (action === "add") {
-    theWarning.innerHTML = "";
+    theWarning.innerHTML = ""; // warning message can be errased when input is good.
     if (!isWord(text)) {
-      theWarning.innerHTML = `"${text}" is not a word`;
-      theWarning.style.color = "red";
+      theWarning.textContent = `"${text}" is not a word`;
+      // theWarning.style.color = "red";
 
       // console.log(`${text} is not a word!`);
     } else {
