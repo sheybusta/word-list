@@ -61,7 +61,7 @@ export const handleInputWord = (event) => {
     // two paths
     if (!data.words.includes(text)) {
       theWarning.innerHTML = `"${text}" is not in the list`;
-      theWarning.style.color = "red"; // if it isn't in the list - warning "are you sure you want to remove it, it not in the list "
+      // theWarning.style.color = "red"; // if it isn't in the list - warning "are you sure you want to remove it, it not in the list "
       // console.log("warning");
     } else {
       data.words.splice(data.words.indexOf(text), 1); // if it exit in the list already we need to remove
